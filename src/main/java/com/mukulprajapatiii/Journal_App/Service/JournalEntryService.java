@@ -4,6 +4,7 @@ import com.mukulprajapatiii.Journal_App.Entity.JournalEntry;
 import com.mukulprajapatiii.Journal_App.Repository.JournalEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import java.util.*;
 
 @Component
@@ -15,9 +16,10 @@ public class JournalEntryService {
         journalEntryRepository.save(journalEntry);
     }
 
-    public List<JournalEntry> getAll(){
+    public List<JournalEntry> getAll() {
         return journalEntryRepository.findAll();
     }
+
     public Optional<JournalEntry> findById(String id) {
         return journalEntryRepository.findById(id);
     }
